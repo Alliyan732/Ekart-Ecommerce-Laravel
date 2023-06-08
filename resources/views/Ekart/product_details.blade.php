@@ -240,7 +240,7 @@
                         <div class="col-lg-12 mt-3">
                             <div class="row">
                                 <div class="col-lg-6 pb-2">
-                                    <a href="#" class="btn btn-danger w-100 addToCartBtn">Add To Cart</a>
+                                    <a id="addToCart" href="#" class="btn btn-danger w-100 addToCartBtn">Add To Cart</a>
                                 </div>
                             </div>
                         </div>

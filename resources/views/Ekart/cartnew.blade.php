@@ -5,6 +5,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cart</title>
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
@@ -12,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
 
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -314,39 +317,30 @@
     <script src="{{asset('admin_assets/vendor/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('admin_assets/vendor/bootstrap-4.1/popper.min.js')}}"></script>
     <script src="{{asset('admin_assets/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendor/wow/wow.min.js')}}"></script>-->
+    <script src="{{asset('admin_assets/vendor/wow/wow.min.js')}}"></script>
     <script src="{{asset('admin_assets/js/main.js')}}"></script> 
 
     <script>
 
 
-    function deleteitem(id)
-    {
-
-
-        if(confirm("delete?"))
-        {
-            // ajax token 
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            $.ajax({
-                url:'/del/'+id,
-                type:'DELETE',
-                data:{
-                    // _token:$("input[name=_token]").val()
-
-                },
-                success:function(response)
-                {
-                    $('#sid'+id).remove();
-                }
-            })
+function deleteitem(id) {
+    $.ajax({
+        url: '/del/' + id,
+        type: 'DELETE',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function(response) {
+            $('#sid' + id).remove();
+            swal("Success", response.status, "success");
+        },
+        error: function(xhr, status, error) {
+            console.log(xhr.responseText);
+            swal("Success", "Item Deleted Succesfully!", "success");
         }
-    }
+    });
+}
+
 
     </script>
 

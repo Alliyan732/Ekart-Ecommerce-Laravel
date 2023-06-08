@@ -76,7 +76,7 @@
 
                                             <div class="form-group">
                                                 <label for="name" class="control-label mb-1"> Price</label>
-                                                <input id="name" value="{{$price}}" name="price" type="text" class="form-control" aria-required="true" aria-invalid="false" required></input>
+                                                <input id="price" value="{{$price}}" name="price" type="text" class="form-control" aria-required="true" aria-invalid="false" required></input>
                                             </div>
 
 

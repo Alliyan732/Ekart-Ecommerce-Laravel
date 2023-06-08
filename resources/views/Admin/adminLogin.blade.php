@@ -423,7 +423,7 @@
                                         <label for="customCheck1" class="custom-control-label">Remember password</label>
                                     </div>
                                     <div>
-                                        <input class="btn-hover signinbutton" type="submit" value="SIGN IN">
+                                        <input id="signin" class="btn-hover signinbutton" type="submit" value="SIGN IN">
                                     </div>
                                 </form>
                             </div>

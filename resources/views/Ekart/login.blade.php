@@ -85,7 +85,7 @@
             <div class="col-lg-6 col-md-6 bg-light">
                 <div>
                     <i class="fa fa-user-circle-o"
-                        style="font-size:20px; position: absolute; right: 0px; top: 40px; right: 40px;"><a href=""
+                        style="font-size:20px; position: absolute; right: 0px; top: 40px; right: 40px;"><a id="registerNow" href=""
                             data-toggle="modal" data-target="#myModal"> Register Now!</a></i>
 
                     <!-- registeration form modal -->
@@ -427,7 +427,7 @@
                                         <label for="customCheck1" class="custom-control-label">Remember password</label>
                                     </div>
                                     <div>
-                                        <input class="btn-hover signinbutton" type="submit" value="SIGN IN">
+                                        <input id="signin" class="btn-hover signinbutton" type="submit" value="SIGN IN">
                                     </div>
                                 </form>
                                 
