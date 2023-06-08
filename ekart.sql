@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
 --
 
 INSERT INTO `admins` (`id`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'alliyan732@gmail.com', 'ali223376', '2022-06-20 07:01:35', '2022-06-20 07:01:35');
+(1, 'alliyan732@gmail.com', '123456', '2022-06-20 07:01:35', '2022-06-20 07:01:35');
 
 -- --------------------------------------------------------
 
